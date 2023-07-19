@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js"></script>
+    <title>{{phukiens[index].name}} - SLYCLOTHING</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+    <link rel="stylesheet" href="sanpham.css">
+    
+</head>
+
+<body ng-app="myapp">
+    <!-- thanh nav  -->
+    <div class="container mt-5 mb-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="images ">
+                                <div class="text-center p-4"> <img id="main_product_image" src="hinh/{{phukiens[index].img}}"
+                                        width="400" /> </div>
+                                <div class="thumbnail text-center">
+                                    <img onclick="changeImage(this)" src="hinh/{{phukiens[index].img}}" alt="" width="70">
+                                     <img onclick="changeImage(this)"
+                                        src="hinh/{{phukiens[index].detail1}}" width="70"> 
+                                        <img
+                                        onclick="changeImage(this)" src="hinh/{{phukiens[index].detail2}}" width="70">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="product p-4 mt-4">
+                                <div class="mt-4 mb-3">
+                                    <h5 class="text-uppercase" style="color: #f05023; font-weight: bold;">{{phukiens[index].name}}</h5>
+                                    <div class="price d-flex flex-row align-items-center"> <span
+                                            class="act-price">{{phukiens[index].number}}</span>
+                                        <div class="ml-2"><span class="price">{{phukiens[index].price|number}}đ</span> <small class="dis-price">{{phukiens[index].sale|number}}đ</small> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="about"> Tích lũy được 2 SLY Points</p>
+                             
+                                <div class="cart mt-4 align-items-center"> <button
+                                        class="btn btn-outline-dark text-uppercase mr-2 px-4" ng-click="addCart(phukiens[index])">Thêm vào giỏ hàng</button> 
+                                </div>
+                                <div class="cart mt-4 align-items-center"> <button
+                                    class="btn btn-outline-dark text-uppercase mr-2 px-4">Mua ngay</button> 
+                            </div>
+                            <img src="hinh/bag.jpg" alt="" width="90%">
+                            <div class="cart mt-4 align-items-center"> <button
+                                class="btn btn-outline-dark text-uppercase mr-2 px-4">+ Gift packaging service</button> 
+                        </div>
+                        <div class="buttons d-flex flex-row mt-3 gap-3 "> 
+                            <button class="btn btn-outline-dark text-uppercase">Hotline</button>
+                            <button class="btn btn-outline-dark text-uppercase">messenger</button> 
+                          </div>
+                        <div class="chuyenhang d-flex flex-row mt-3 gap-3">
+                            <img src="hinh/shipped.png" alt=""  width="10%"> <div class=" text text-uppercase" style="border-right: 1px dashed #f05023;">giao hàng toàn quốc</div>
+                            
+                            <img src="hinh/payment-method.png" alt="" width="10%"><div class=" text text-uppercase" style="border-right: 1px dashed #f05023;">thanh toán khi nhận hàng</div> 
+                            <img src="hinh/boxes.png" alt=""  width="10%"> <div class=" text text-uppercase">đổi hàng trong 7 ngày</div> 
+                        </div>
+                        <div class="product-short mt-3">
+                             <p>Chất Liệu: Da Saffiano cao cấp</p>
+                             <p>Chi tiết: In UV Printing</p>
+                             <p>Ví da được sơn mài góc cạnh tăng tính thẩm mỹ</p>
+                             
+                             <p>Ví gồm:</p>
+                             <p>+ 8 ngăn nhỏ</p>
+                             <p>+ 2 ngăn lớn</p>
+                             <p>+ 1 card holder</p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <img src="hinh/short_wallet-2048x1185.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- thanh title  -->
+    <!-- <h1>Index: {{index}}</h1>
+    <h1>Tên sản phẩm : {{sanphams[index].name}}</h1>
+    <img width="500px" src="hinh/{{sanphams[index].img}}" alt="">
+    <h2>Giá : {{sanphams[index].price}}</h2> -->
+    <script>
+    //     function changeImage(element) {
+    
+    // var main = document.getElementById('main_product_image');
+    // main.src = element.src;
+    
+    
+    // }
+    </script>
+</body>
+
+</html>

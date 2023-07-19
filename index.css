@@ -1,0 +1,216 @@
+.button{
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    border: none;
+}
+.nut:hover{
+    background-color: black;
+    color: white;
+}
+nav{
+    background-color: black ;
+    opacity: 0.8;
+
+}
+/* .nav{
+    position: fixed;
+    background: rgba(0, 0, 0, 0.4);
+    box-sizing: border-box;
+    box-shadow:  0 1px 1px rgba(0,0,0,0.12),
+    0 2px 2px rgba(0,0,0,0.12),
+    0 4px 4px rgba(0,0,0,0.12),
+    0 8px 8px rgba(0,0,0,0.12),
+    0 16px 16px rgba(0,0,0,0.12);
+} */
+.section1{
+    box-sizing: border-box;
+    background-size: cover;
+}
+
+.nav-inline{
+    display: inline-block;
+}
+.product-grid{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    position: relative;
+    box-shadow: #777777;
+}
+.product-grid .product-image{
+    overflow: hidden;
+    position: relative;
+}
+.product-grid .product-image a.image{ display: block; }
+.product-grid .product-image img{
+    width: 100%;
+    height: auto;
+    transition: all 0.5s ease 0s;
+}
+.product-grid:hover .product-image img{ transform: scale(1.1); }
+.product-grid .product-links{
+    background: #fff;
+    width: 150px;
+    padding: 10px 20px;
+    margin: 0;
+    list-style: none;
+    border-radius: 30px;
+    box-shadow: 1px 0 30px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateX(-50%) translateY(-150%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: all .35s ease;
+    display: flex;
+}
+.giamgia{ 
+    border-radius: 5px;
+    background-color: #f05023;
+    color: #fff;
+    padding-top: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+    height: 20px;
+    font-size: 12px;
+}
+.col-inner{
+    text-align: center;
+    margin-left: 0px;
+    margin-right: -23px;
+}
+.gioithieu{
+    padding-top: 5px;
+    color: #777777;
+    font-size: 1rem;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.more{
+    text-decoration: none;
+    padding-top: 2px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.product-grid:hover .product-links{
+    opacity: 1;
+    transform: translateX(-50%) translateY(-50%);
+}
+.product-grid .product-links li{
+    width: 48%;
+    margin: 10px 0;
+    display: inline-block;
+}
+.product-grid .product-links li a{
+    color: #788090;
+    font-size: 18px;
+    transition: all .3s;
+}
+.product-grid .product-links li a:hover{
+    color: #f05023;
+    text-shadow: 4px 4px 0 rgba(0,0,0,0.2);
+}
+.product-grid .product-content{ padding: 15px;}
+.product-grid .price{
+    color: #f05023;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    display: flex;
+}
+.saleoff{
+    background-color: red;
+    top: 10px;
+    left: 40px;
+}
+.product-grid .price span{
+    color: #999;
+    font-weight: 400;
+    margin: 0 0 0 5px;
+    text-decoration: line-through;
+
+}
+.product-grid .title{
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 0 0 12px;
+    font-family: sans-serif;
+    font-weight: bold;
+    
+}
+
+
+.product-grid .title:hover{
+    color: #f05023;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease 0s;
+}
+.product-grid .rating li.far{ color: #999; }
+@media screen and (max-width: 990px){
+    .product-grid{ margin-bottom: 30px; }
+}
+.cuoi{
+    font-family: sans-serif;
+    font-size: 10.6px;
+    color: #fff;
+    
+}
+.cuoi > a{
+    text-decoration: none;
+    color: #fff;
+}
+.h6{
+    color: #f05023;
+    padding-top: 5px;
+}
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition:  0.4s linear;
+    
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 300px;
+    caret-color:red;
+    transition: width 0.4s linear;
+    display: block;
+   
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #e74c3c;
+    transition:  0.4s linear;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    text-decoration:none;
+    }
+.drop:hover{
+    background-color: black;
+}

@@ -1,0 +1,197 @@
+body {
+    background-color: #000
+}
+
+.card {
+    border: none
+}
+
+.product {
+    background-color:white;
+    border-left: 1px dashed wheat;
+}
+.price{
+    font-weight: bold;
+    color: #f05023;
+   
+}
+.brand {
+    font-size: 13px
+}
+
+.act-price {
+    color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #f05023;
+    padding: 3px;
+}
+
+.dis-price {
+    text-decoration: line-through;
+    color: gray;
+    
+}
+
+.about {
+    font-size: 14px;
+    color: #f05023;
+    font-weight: bold;
+}
+
+.color {
+    margin-bottom: 10px
+}
+
+label.radio {
+    cursor: pointer
+}
+
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+label.radio span{
+    padding: 2px 9px;
+    border: 1px solid black;
+    display: inline-block;
+    color: gray;
+    border-radius: 3px;
+    text-transform: uppercase;
+    
+}
+.btn :hover{
+    box-shadow: black;
+    border: 1px solid black;
+    border-radius: 3px;
+    transition: 0.5;
+}
+
+label.radio input:checked+span {
+    border-color: #f05023;
+    background-color: black;
+    color: #fff
+}
+
+.btn-outline-dark {
+    background-color: white;
+    color: black;
+    border-color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    width: 100%;
+}
+
+.btn-outline-dark:hover {
+    background-color: black !important;
+    border-color: #f05023 ;
+    color: #eee;
+}
+
+.btn-outline-dark:focus {
+    box-shadow: none;
+
+}
+
+.cart i {
+    margin-right: 10px
+}
+.text{
+    font-size: 9px;
+    font-weight: 700;
+    
+}
+.chuyenhang{
+    border-radius: 8px;
+    border: dashed 1px rgb(240, 80, 35);
+    color: #464646;
+    padding: 5px 0;
+    background-color: rgb(254,205,165);
+    height: 50px;
+}
+.product-short{
+    color: #777777;
+    font-weight: 500;
+    font-family: "Barlow", sans-serif;
+    font-size: 15px;
+}
+.gradient-custom {
+    /* fallback for old browsers */
+    background: black;
+    
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to right, rgb(240, 80, 35), rgb(255, 255, 255));
+    
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, rgb(240, 80, 35), rgb(255, 255, 255))
+    }
+.sanphamkhac a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+.sanphamkhac a:hover{
+    border-radius: 5px;
+    background-color: #000;
+    color: #eee;
+    padding: 3px 3px 3px 3px;
+}
+.chonsize{
+    background-color: #000;
+    color: #eee;
+    border: #f05023;
+    width: 50px;
+}
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #353b48;
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0px;
+    caret-color:transparent;
+    line-height: 40px;
+    transition:  0.4s linear;
+    
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 300px;
+    caret-color:red;
+    transition: width 0.4s linear;
+    /* display: block; */
+    }
+
+    .searchbar:hover > .search_icon{
+    background: white;
+    color: #e74c3c;
+    transition:  0.4s linear;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    text-decoration:none;
+    }
+.options{
+    color: #ffffff;
+}

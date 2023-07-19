@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <section class="section1">
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/hinh/Warning_web1.jpg" alt="" class="d-block" style="width:100% ; height: 80%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="/hinh/lny-banner.jpg" alt="" class="d-block" style="width:100% ; height: 80%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="/hinh/banner_home.jpg" alt="" class="d-block" style="width:100%; height: 80%;">
+                </div>
+                <div class="carousel-item">
+                    <img src="/hinh/thongbao_banner.jpg" alt="" class="d-block" style="width:100%; height: 80%;">
+                </div>
+            </div>
+
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </section>
+    <!-- line-chu -->
+    <div class="bg section-bg fill bg-fill bg-loaded bg-dark" style="width: 100%;height: 35px;">
+        <h3 style="text-align: center; font-family: monospace; color: white;font-size: 20px; padding-top: 5px;"
+            class="col">MIỄN PHÍ
+            GIAO HÀNG TOÀN
+            QUỐC</h3>
+    </div>
+    <!-- article-hinh -->
+    <div>
+        <a href="#"><img src="/hinh/hinh1.jpg" alt="" style="width: 100%;"></a>
+    </div>
+    <!-- trang san pham  -->
+    <div class="container">
+        <div ng-controller="myctrl" class="row ">
+            <div class="col-md-3 pb-3" ng-repeat="p in sanphams|limitTo:xemthem|orderBy:'price':sapxep">
+                <div>
+                    <div class="card card-primary text-center ">
+                        <div class="product-grid">
+                            <div class="card-body">
+                                <div class="product-image">
+                                    <a href="#!ao/{{p.id}}"> <img src="hinh/{{p.img}}" class="image img-fluid" /></a>
+
+                                    <ul class="product-links">
+                                        <li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+                                        <li><a href=""><i class="fa fa-heart"></i></a></li>
+                                        <li><a href=""><i class="fa fa-eye"></i></a></li>
+                                        <li><a href=""><i class="fa fa-random"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <a href="#!ao/{{p.id}}" style="text-decoration: none;color: #f05023;">
+                                    <div class="title">{{p.name}}</div>
+                                </a>
+
+                                <div class="price d-flex justify-content-center">
+                                    <div class="giamgia">{{p.number}}</div>
+                                    {{p.price|number}}đ<span>{{p.sale|number}}đ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button style="width: 200px;margin-left: 12px;" type="button" class="btn btn-outline-dark btn-sm  " ng-click="sapxepsp()">{{TitleSort}}</button>
+            <div class="row" style="width: 100%; height: 70px; ">
+                <div class="col small-12 large-12">
+                    <div class="col-inner">
+                        <a href="" class="btn btn-outline-dark btn-sm w-100 ">
+                            <div class="more" ng-click="seemore()"> <span >SEE MORE</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+    </div>
+    </div>
+
+    <!-- article hinh -->
+    <div>
+        <a href=""><img src="/hinh/voucher.jpg" alt="" width="100%"></a>
+    </div>
+    <!-- article hinh -->
+    <div>
+        <a href=""><img src="/hinh/Product_banner31111.jpg" alt="" width="100%"></a>
+    </div>
+    <!-- trang san pham  -->
+    <div class="container">
+        <div ng-controller="myctrl" class="row ">
+            <div class="col-md-3 pb-3" ng-repeat="p in products|limitTo:xemthem1|orderBy:'price':sapxep">
+                <div>
+                    <div class="card card-primary text-center ">
+                        <div class="product-grid">
+                            <div class="card-body">
+                                <div class="product-image">
+                                    <a href="#!hoodie/{{p.id}}"> <img src="hinh/{{p.img}}" class="image img-fluid" /></a>
+
+                                    <ul class="product-links">
+                                        <li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+                                        <li><a href=""><i class="fa fa-heart"></i></a></li>
+                                        <li><a href=""><i class="fa fa-eye"></i></a></li>
+                                        <li><a href=""><i class="fa fa-random"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <a href="#!hoodie/{{p.id}}" style="text-decoration: none;color: #f05023;">
+                                    <div class="title">{{p.name}}</div>
+                                </a>
+
+                                <div class="price d-flex justify-content-center">
+                                    <div class="giamgia">{{p.number}}</div>
+                                    {{p.price|number}}đ<span>{{p.sale|number}}đ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button style="width: 200px;margin-left: 12px;" type="button" class="btn btn-outline-dark btn-sm  " ng-click="sapxepsp()">{{TitleSort}}</button>
+            <div class="row" style="width: 100%; height: 70px; ">
+                <div class="col small-12 large-12">
+                    <div class="col-inner">
+                        <a href="" class="btn btn-outline-dark btn-sm w-100 ">
+                            <div class="more" ng-click="seemore1()"> <span >SEE MORE</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+    </div>
+    </div>
+    <!-- article hinh -->
+    <div>
+        <a href=""><img src="/hinh/Product_banner.jpg" alt="" width="100%"></a>
+    </div>
+    <!-- trang san pham  -->
+    <div class="container">
+        <div ng-controller="myctrl" class="row ">
+            <div class="col-md-3 pb-3" ng-repeat="p in productss|limitTo:xemthem2|orderBy:'price':sapxep">
+                <div>
+                    <div class="card card-primary text-center ">
+                        <div class="product-grid">
+                            <div class="card-body">
+                                <div class="product-image">
+                                    <a href="#!quan/{{p.id}}"> <img src="hinh/{{p.img}}" class="image img-fluid" /></a>
+
+                                    <ul class="product-links">
+                                        <li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+                                        <li><a href=""><i class="fa fa-heart"></i></a></li>
+                                        <li><a href=""><i class="fa fa-eye"></i></a></li>
+                                        <li><a href=""><i class="fa fa-random"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <a href="#!quan/{{p.id}}" style="text-decoration: none;color: #f05023;">
+                                    <div class="title">{{p.name}}</div>
+                                </a>
+
+                                <div class="price d-flex justify-content-center">
+                                    <div class="giamgia">{{p.number}}</div>
+                                    {{p.price|number}}đ<span>{{p.sale|number}}đ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button style="width: 200px;margin-left: 12px;" type="button" class="btn btn-outline-dark btn-sm  " ng-click="sapxepsp()">{{TitleSort}}</button>
+            <div class="row" style="width: 100%; height: 70px; ">
+                <div class="col small-12 large-12">
+                    <div class="col-inner">
+                        <a href="" class="btn btn-outline-dark btn-sm w-100 ">
+                            <div class="more" ng-click="seemore2()"> <span >SEE MORE</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+    </div>
+    </div>
+    <!-- article hinh -->
+    <div><a href=""><img src="/hinh/Product_banner41111.jpg" alt="" width="100%"></a></div>
+    <!-- trang san pham -->
+    <div class="container">
+        <div ng-controller="myctrl" class="row ">
+            <div class="col-md-3 pb-3" ng-repeat="p in phukiens|limitTo:xemthem3|orderBy:'price':sapxep">
+                <div>
+                    <div class="card card-primary text-center ">
+                        <div class="product-grid">
+                            <div class="card-body">
+                                <div class="product-image">
+                                    <a href="#!phukien/{{p.id}}"> <img src="hinh/{{p.img}}" class="image img-fluid" /></a>
+
+                                    <ul class="product-links">
+                                        <li><a href=""><i class="fas fa-shopping-cart"></i></a></li>
+                                        <li><a href=""><i class="fa fa-heart"></i></a></li>
+                                        <li><a href=""><i class="fa fa-eye"></i></a></li>
+                                        <li><a href=""><i class="fa fa-random"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="product-content">
+                                <a href="#!phukien/{{p.id}}" style="text-decoration: none;color: #f05023;">
+                                    <div class="title">{{p.name}}</div>
+                                </a>
+
+                                <div class="price d-flex justify-content-center">
+                                    <div class="giamgia">{{p.number}}</div>
+                                    {{p.price|number}}đ<span>{{p.sale|number}}đ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <button style="width: 200px;margin-left: 12px;" type="button" class="btn btn-outline-dark btn-sm  " ng-click="sapxepsp()">{{TitleSort}}</button>
+            <div class="row" style="width: 100%; height: 70px; ">
+                <div class="col small-12 large-12">
+                    <div class="col-inner">
+                        <a href="" class="btn btn-outline-dark btn-sm w-100 ">
+                            <div class="more" ng-click="seemore3()"> <span >SEE MORE</span></div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+
+
+    </div>
+    </div>
+    <!-- hinh doi tra  -->
+    <div>
+        <a href=""><img src="/hinh/CHINHSACHDOITRA-xxx.jpg" alt="" width="100%"></a>
+    </div>
+    <!-- hinh footer -->
+    <div class="row row-small row-full-width align-middle align-center hide-for-small"
+        style="background-color: #FFFFFF;">
+        <div class="col medium-9 small-12 large-9">
+            <div class="col-inner text-left pt-5" style=" text-align: left; margin-right: 20px; margin-left: 20px;">
+                <p><span class="gioithieu" style="color: #Ff6600;"><strong>Giới Thiệu
+                        </strong></span>
+                    <br>
+                <p class="gioithieu">
+                    Đặt nền móng tại Sài Gòn – điểm giao thoa giữa các sắc màu văn hoá rực rỡ và âm hưởng sôi
+                    nổi của
+                    nhịp sống thành thị; SLY mang trong hình bản sắc độc đáo đại diện cho tinh thần của một thế
+                    hệ năng
+                    động, không ngừng biến hoá. Cá tính trong các thiết kế của SLY được chắt lọc để chạm đến
+                    ngưỡng tinh
+                    tế trong từng nét tối giản, để từ đó truyền cảm hứng cho bản nhạc tâm hồn bùng nổ cảm xúc
+                    của người
+                    trẻ cá tính trong thế giới hiện đại.</p> <br>
+                <p class="gioithieu"> Vẻ ngạo nghễ phóng khoáng của thiết kế streetwear thời thượng không thể
+                    thiếu sự song hành của chất
+                    lượng bền vững. SLY chú trọng chọn lựa, cải tiến liên tục chất liệu để ứng dụng phù hợp với
+                    lối sống
+                    và khí hậu tại Việt Nam. SLY là hiện thân của người trẻ năng động, tự tin thể hiện chất
+                    riêng chẳng
+                    ngại định kiến. Vì vậy, SLY cũng mang theo đó nguồn năng lượng tích cực, không ngừng chuyển
+                    động và
+                    làm phong phú vũ trụ nhỏ bên trong mình, vùng vẫy ngắm nhìn thế
+                    giới lớn. Giới hạn bản thân là điều không nằm trong từ điển phong cách của SLY.
+                </p>
+                <br>
+                <p class="gioithieu">SLY - STILL LOVING YOU</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
